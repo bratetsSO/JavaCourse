@@ -42,6 +42,16 @@ public class Dog extends Animal {
         return "id = " + getId() + "; Окрас = " + getColor() + "; максимальная продолжительность жизни = " + getMaxLifeSpan() + "; тип еды которой питаются = " + getEatType() + "; кличка = " + name + "; порода = " + breed + "; средний вес = " + averageWeight + ".";
     }
 
+    // task 10
+    public boolean equals(Dog dog) {
+        return this.getId() == dog.getId() && this.getColor() == dog.getColor() && this.getMaxLifeSpan() == dog.getMaxLifeSpan() && this.getEatType() == dog.getEatType() && this.name == dog.name && this.breed == dog.breed && this.averageWeight == dog.averageWeight;
+    }
+
+    public int hashCode() {
+        int res = this.getId() + this.getColor().hashCode() + this.getMaxLifeSpan() + this.getEatType().hashCode() + this.name.hashCode() + this.breed.hashCode() + (int) this.averageWeight*100;
+        return res;
+    }
+
     // --- геттеры и сеттеры ---
     public String getName() {
         return name;

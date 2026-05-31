@@ -33,4 +33,13 @@ public class Bird extends Animal {
     public String toString() {
         return "id = " + getId() + "; Окрас = " + getColor() + "; максимальная продолжительность жизни = " + getMaxLifeSpan() + "; тип еды которой питаются = " + getEatType() + "; семейство = " + family + "; максимальная высота полёта = " + maxHeightFly + ".";
     }
+    // task 10
+    public boolean equals(Bird bird) {
+        return this.getId() == bird.getId() && this.getColor() == bird.getColor() && this.getMaxLifeSpan() == bird.getMaxLifeSpan() && this.getEatType() == bird.getEatType() && this.family == bird.family && this.maxHeightFly == bird.maxHeightFly;
+    }
+
+    public int hashCode() {
+        int res = this.getId() + this.getColor().hashCode() + this.getMaxLifeSpan() + this.getEatType().hashCode() + this.family.hashCode() + (int) this.maxHeightFly*100;
+        return res;
+    }
 }
