@@ -65,5 +65,29 @@ public class Main {
         zoo.removeAnimalById(removeId);
         System.out.println(removeId + "-ки больше неееееет");
         zoo.showAnimals(zoo.getAnimals());
+        // task 10
+        System.out.println("==================TASK 10========================");
+        System.out.println("==================equals========================");
+        System.out.println("песики");
+        Dog dog4 = dog1;
+        System.out.println("dog1 vs dog4 => " + dog1.equals(dog4));
+        System.out.println("dog1 vs dog2 => " + dog1.equals(dog2));
+        System.out.println("птички");
+        Bird bird4 = bird1;
+        System.out.println("bird1 vs bird4 => " + bird1.equals(bird4));
+        System.out.println("bird1 vs bird2 => " + bird1.equals(bird2));
+        System.out.println("==================hashcode========================");
+        System.out.println("песики");
+        System.out.println("dog1 => " + dog1.hashCode());
+        System.out.println("dog2 => " + dog2.hashCode());
+        System.out.println("dog4 => " + dog4.hashCode());
+        System.out.println("dog1 vs dog4 => " + (dog1.hashCode() == dog4.hashCode()));
+        System.out.println("dog1 vs dog2 => " + (dog1.hashCode() == dog2.hashCode()));
+        System.out.println("птички");
+        System.out.println("bird1 => " + bird1.hashCode());
+        System.out.println("bird2 => " + bird2.hashCode());
+        System.out.println("bird4 => " + bird4.hashCode());
+        System.out.println("bird1 vs bird4 => " + (bird1.hashCode() == bird4.hashCode()));
+        System.out.println("bird1 vs bird2 => " + (bird1.hashCode() == bird2.hashCode()));
     }
 }
