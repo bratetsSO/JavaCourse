@@ -1,6 +1,6 @@
 package by.lessons.homework.lesson_11;
 
-public interface Robot /*extends RobotIngineer*/{
+public interface Robot{
     //1. Создать интерфейс Робот.
     // В нём определены методы:
     // Дефолтный метод:  Отремонтировать робота и

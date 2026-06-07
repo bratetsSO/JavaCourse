@@ -1,6 +1,6 @@
 package by.lessons.homework.lesson_11;
 
-public interface RobotIngineer {
+public interface RobotIngineer extends Robot {
     //1.5 Добавить интерфейс, который будет называться РоботИнженер.
     // Он должен расширить интерфейс Робот.
     // От этого интерфейса должны наследоваться РоботСапёр и РоботСтроитель.

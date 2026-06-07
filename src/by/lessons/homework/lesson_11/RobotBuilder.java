@@ -1,6 +1,6 @@
 package by.lessons.homework.lesson_11;
 
-public class RobotBuilder implements Robot/*,RobotIngineer */{
+public class RobotBuilder implements Robot, RobotIngineer{
     //РоботСроитель. Поля: модель, потребляемая мощность, страна производитель, агрегат для строительства, материал, включение робота (boolean isOn.)
     private String model;
     private double power;
@@ -18,6 +18,10 @@ public class RobotBuilder implements Robot/*,RobotIngineer */{
         this.isOn = isOn;
     }
 
+    public String getModel() {
+        return model;
+    }
+
     @Override
     public void switchOn() {
         this.isOn = true;
@@ -32,6 +36,11 @@ public class RobotBuilder implements Robot/*,RobotIngineer */{
 
     @Override
     public void uniquePossibility() {
-        System.out.println("РоботСтроитель строит");
+        System.out.println(getModel() + " - РоботСтроитель строит");
+    }
+
+    @Override
+    public void createItem() {
+        System.out.println(getModel() + " - Робот строитель создаёт бетон");
     }
 }

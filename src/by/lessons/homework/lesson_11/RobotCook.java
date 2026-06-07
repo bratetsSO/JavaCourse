@@ -18,6 +18,10 @@ public class RobotCook implements Robot {
         this.isOn = isOn;
     }
 
+    public String getModel() {
+        return model;
+    }
+
     @Override
     public void switchOn() {
         this.isOn = true;
@@ -32,6 +36,6 @@ public class RobotCook implements Robot {
 
     @Override
     public void uniquePossibility() {
-        System.out.println("РоботПовар готовит");
+        System.out.println(getModel() + " - РоботПовар готовит");
     }
 }

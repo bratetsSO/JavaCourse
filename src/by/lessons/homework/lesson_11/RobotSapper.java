@@ -1,6 +1,6 @@
 package by.lessons.homework.lesson_11;
 
-public class RobotSapper implements Robot/*, RobotIngineer*/ {
+public class RobotSapper implements Robot, RobotIngineer {
     //РоботСапёр. Поля: модель, потребляемая мощность, средство для разминирования (шасси номер), материал, включение робота (boolean isOn)
     private String model;
     private double power;
@@ -14,6 +14,10 @@ public class RobotSapper implements Robot/*, RobotIngineer*/ {
         this.chassisNumber = chassisNumber;
         this.material = material;
         this.isOn = isOn;
+    }
+
+    public String getModel() {
+        return model;
     }
 
     @Override
@@ -30,11 +34,16 @@ public class RobotSapper implements Robot/*, RobotIngineer*/ {
 
     @Override
     public void uniquePossibility() {
-        System.out.println("РоботСапер разминирует");
+        System.out.println(getModel() + " - РоботСапер разминирует");
     }
 
     @Override
     public void repair() {
         System.out.println("РобоСапер отремонтирован");
+    }
+
+    @Override
+    public void createItem() {
+        System.out.println(getModel() + " - РоботСапёр создаёт приспособление для разминирования");
     }
 }
