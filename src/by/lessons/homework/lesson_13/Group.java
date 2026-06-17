@@ -41,9 +41,6 @@ public class Group {
         }*/
         //хороший вариант 2
         students.removeIf(s -> s.avarageMark < mark);
-
-
-
     }
 
     //1.5. Реализовать метод, если в группе меньше 2 человек,
